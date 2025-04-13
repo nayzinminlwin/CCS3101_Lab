@@ -2,29 +2,30 @@ package Lab2;
 public class Lab2_Exercise_Q1{
     public static void main(String[] args) {
 
-        // Intializing Students and Courses
+        // Creating Student Objects
         Student s1 = new Student("Peter Jones");
         Student s2 = new Student("Kim Smith");
         Student s3 = new Student("IU");
 
-        Course c1 = new Course("Data Structure");
-        Course c2 = new Course("Database Systems");
+        // Creating Course Objects
+        Course cDataStructure = new Course("Data Structure");
+        Course cDatabase = new Course("Database Systems");
 
         // Registering Courses for each student
-        RegisterCourse(s1,c1);
-        RegisterCourse(s2,c1);
-        RegisterCourse(s2,c2);
-        // RegisterCourse(s3,c2);
+        RegisterCourse(s1,cDataStructure);
+        RegisterCourse(s2,cDataStructure);
+        RegisterCourse(s2,cDatabase);
+        // RegisterCourse(s3,cDatabase);
 
         // Printing Students in each course
-        System.out.printf("Students registered for %s Course\n",c1.getCourseName());
-        for(Student s : c1.getClassList())
+        System.out.printf("Students registered for %s Course\n",cDataStructure.getCourseName());
+        for(Student s : cDataStructure.getClassList())
         {
             System.out.println(s.getStudentName());
         }
 
-        System.out.printf("\nStudents registered for %s Course\n",c2.getCourseName());
-        for(Student s : c2.getClassList())
+        System.out.printf("\nStudents registered for %s Course\n",cDatabase.getCourseName());
+        for(Student s : cDatabase.getClassList())
         {
             System.out.println(s.getStudentName());
         }
@@ -41,6 +42,7 @@ public class Lab2_Exercise_Q1{
             System.out.println(c.getCourseName());
         }
         
+        // Checking if there are students with no course registration.
         if(s3.getRegisteredCourses().isEmpty())
             System.out.printf("\n%s is very bad student, dia dont take any course.\n",s3.getStudentName());
         else
@@ -52,8 +54,11 @@ public class Lab2_Exercise_Q1{
             }
         }
     }
+
+    // Course registration function 
     public static void RegisterCourse(Student s,Course c)
     {
+        // adding student to course and course to student
         c.addStudent(s);
         s.addCourse(c);
     }

@@ -37,6 +37,7 @@ class Stock
     private double previousClosingPrice;
     private double currentPrice;
 
+    // Null Constructor
     Stock()
     {
         this.symbol = "NZML";
@@ -46,6 +47,7 @@ class Stock
         currentPrice = 200;
     }
 
+    // full attribute Constructor 
     Stock(String symbol, String name, double previousClosingPrice, double currentPrice)
     {
         this.symbol = symbol;
@@ -54,13 +56,13 @@ class Stock
         this.currentPrice = currentPrice;
     }
 
+    // getter for all attributes
     public String getName() {
         return name;
     }
     public String getSymbol() {
         return symbol;
     }
-
     public double getCurrentPrice() {
         return currentPrice;
     }
@@ -68,6 +70,7 @@ class Stock
         return previousClosingPrice;
     }
 
+    // setter for Current price and previous price
     public void setCurrentPrice(double currentPrice)
     {
         // when new price come, current price will be stored in the previousClosingPrice.
@@ -75,6 +78,7 @@ class Stock
         this.currentPrice = currentPrice;
     }
 
+    // calculating function for Change percentange between current and previous price
     public double getChangePercentage()
     {
         return ((currentPrice-previousClosingPrice)/previousClosingPrice) *100;

@@ -5,10 +5,13 @@ import java.util.List;
 public class Course{
     private String name;
 
+    // constructor
     Course(String courseName)
     {
         this.name = courseName;
     }
+
+    // getter for course name
     public String getCourseName()
     {
         return this.name;
