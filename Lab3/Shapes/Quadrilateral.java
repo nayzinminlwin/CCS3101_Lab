@@ -5,14 +5,6 @@ public class Quadrilateral {
     private Line lineB;
     private Line lineC;
     private Line lineD;
- 
-    protected boolean parallelAC = false;
-    protected boolean parallelBD = false;
-
-    // final int degreeAB;
-    // final int degreeBC;
-    // final int degreeCD;
-    // final int degreeAD;
 
     Quadrilateral(Line lineA, Line lineB, Line lineC, Line lineD)
     {
