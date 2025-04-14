@@ -1,12 +1,10 @@
 package Lab3.Shapes;
 
 public class Quadrilateral {
-    private final Line lineA;
-    private final Line lineB;
-    private final Line lineC;
-    private final Line lineD;
-
-    private int height;
+    private Line lineA;
+    private Line lineB;
+    private Line lineC;
+    private Line lineD;
  
     protected boolean parallelAC;
     protected boolean parallelBD;
@@ -16,31 +14,30 @@ public class Quadrilateral {
     // final int degreeCD;
     // final int degreeAD;
 
-    Quadrilateral(Line lineA, Line lineB, Line lineC, Line lineD,int height)
+    Quadrilateral(Line lineA, Line lineB, Line lineC, Line lineD)
     {
         this.lineA = lineA;
         this.lineB = lineB;
         this.lineC = lineC;
         this.lineD = lineD;
-        this.height = height;
 
-        this.lineA.Connect(this.lineA.getPointB(),this.lineB.getPointA());
-        this.lineB.Connect(this.lineB.getPointB(), this.lineC.getPointA());
-        this.lineC.Connect(this.lineC.getPointB(), this.lineD.getPointA());
-        this.lineD.Connect(this.lineD.getPointB(), this.lineA.getPointA());
+        Line.LineConnect(lineA, lineB);
+        Line.LineConnect(lineB, lineC);
+        Line.LineConnect(lineC, lineD);
+        Line.LineConnect(lineD, lineA);
 
         this.parallelAC = false;
         this.parallelBD = false;
     }
 
-    public int getHeight()
+    public double CalculateArea()
     {
-        return this.height;
-    }
-
-    public int CalculateArea()
-    {
-        int result =0;
-        return result;
+        int[] lineAPoints = this.lineA.getLinePoints(); // x1 y1 x2 y2
+        int[] lineBPoints = this.lineB.getLinePoints(); // x2 y2 x3 y3
+        int[] lineCPoints = this.lineC.getLinePoints(); // x3 y3 x4 y4
+        int S1 = (lineAPoints[0]*lineAPoints[3])+(lineAPoints[2]*lineBPoints[3])+(lineCPoints[0]*lineCPoints[3])+(lineCPoints[2]*lineAPoints[1]);
+        int S2 = (lineAPoints[1]*lineAPoints[2])+(lineAPoints[3]*lineBPoints[2])+(lineCPoints[1]*lineCPoints[2])+(lineCPoints[3]*lineAPoints[0]);
+        double area = (Math.abs(S1-S2))/2;
+        return area;
     }
 }

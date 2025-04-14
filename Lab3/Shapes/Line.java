@@ -1,42 +1,62 @@
 package Lab3.Shapes;
 
 public class Line {
-    private final Point pointA;
-    private final Point pointB;
-    private int length;
+    private Point pointA;
+    private Point pointB;
 
-    Line(Point a, Point b, int length)
+    // Constructor method
+    Line(Point a, Point b)
     {
         this.pointA = a;
         this.pointB = b;
-        this.length = length;
     }
 
+    // getter for the Line
     public String getLine()
     {
-        return String.format("%c---%c \n",this.pointA.getPointName(), this.pointB.getPointName());
+        return String.format("(%c,%c)---(%c,%c) \n",this.pointA.getX(),this.pointA.getY(), this.pointB.getX(),this.pointB.getY());
     }
 
+    // getter & setter for point A
     public Point getPointA()
     {
         return this.pointA;
     }
+    public void setPointA(Point A)
+    {
+        this.pointA = A;
+    }
+
+    // getter & setter for point B
     public Point getPointB()
     {
         return this.pointB;
     }
-    public int getLength()
+    public void setPointB(Point B)
     {
-        return this.length;
+        this.pointB = B;
     }
 
-    public void Connect(Point a, Point A)
+    // Line Connecting function for 2 lines.
+    public static void LineConnect(Line A, Line B)
     {
-        a = A;
+        A.setPointB(B.getPointA());
     }
 
-    public static Line CopyLine(Line originalLine)
+    public int getLength(Line A)
     {
-        return new Line(originalLine.getPointA(),originalLine.getPointB(),originalLine.getLength());
+        int length=0;
+
+        return length;
+    }
+
+    public int[] getLinePoints()
+    {
+        int[] linePoints = new int[4];
+        linePoints[0] = this.getPointA().getX();
+        linePoints[1] = this.getPointA().getY();
+        linePoints[2] = this.getPointB().getX();
+        linePoints[3] = this.getPointB().getY();
+        return linePoints;
     }
 }

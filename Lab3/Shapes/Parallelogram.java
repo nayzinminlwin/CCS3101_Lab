@@ -2,9 +2,9 @@ package Lab3.Shapes;
 
 public class Parallelogram extends Quadrilateral{
 
-    Parallelogram(Line lineA, Line lineB, int height)
+    Parallelogram(Line lineA, Line lineB, Line lineC, Line lineD)
     {
-        super(lineA, lineB, Line.CopyLine(lineA), Line.CopyLine(lineB),height);
+        super(lineA, lineB, lineC, lineD);
 
         super.parallelAC = true;
         super.parallelBD = true;

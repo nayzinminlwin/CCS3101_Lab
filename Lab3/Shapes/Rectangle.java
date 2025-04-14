@@ -5,10 +5,10 @@ public class Rectangle extends Quadrilateral{
     private final int degreeAB;
     private final int degreeBC;
 
-    Rectangle(Line lineA, Line lineB)
+    Rectangle(Line lineA, Line lineB, Line lineC, Line lineD)
     {
-        super(lineA, lineB, Line.CopyLine(lineA), Line.CopyLine(lineB),lineA.getLength());
-
+        super(lineA, lineB, lineC, lineD);
+        
         super.parallelAC = true;
         super.parallelBD = true;
 

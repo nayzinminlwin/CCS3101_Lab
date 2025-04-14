@@ -5,10 +5,9 @@ public class Square extends Quadrilateral{
     private final int degreeAB;
     private final int degreeBC;
 
-    Square(Line lineA)
+    Square(Line lineA, Line lineB, Line lineC, Line lineD)
     {
-        super(lineA, Line.CopyLine(lineA), Line.CopyLine(lineA), Line.CopyLine(lineA),lineA.getLength());
-
+        super(lineA, lineB, lineC, lineD);
         super.parallelAC = true;
         super.parallelBD = true;
 

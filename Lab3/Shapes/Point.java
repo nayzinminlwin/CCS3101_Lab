@@ -1,15 +1,24 @@
 package Lab3.Shapes;
 
 public class Point {
-    private final char name;
+    // x and y coordinate for the point
+    private final int x;
+    private final int y;
 
-    Point(char a)
+    // Constructor
+    Point(int x, int y)
     {
-        this.name = a;
+        this.x = x;
+        this.y = y;
     }
 
-    public char getPointName()
+    // getter for x and y
+    public int getX()
     {
-        return this.name;
+        return this.x;
+    }
+    public int getY()
+    {
+        return this.y;
     }
 }
