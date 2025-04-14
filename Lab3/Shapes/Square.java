@@ -3,7 +3,7 @@ package Lab3.Shapes;
 public class Square extends Quadrilateral{
 
     private final int degreeAB;
-    private final int degreeBC;
+    public final int degreeBC;
 
     Square(Line lineA, Line lineB, Line lineC, Line lineD)
     {
@@ -13,5 +13,11 @@ public class Square extends Quadrilateral{
 
         this.degreeAB = 90;
         this.degreeBC = 90;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Square : ";
     }
 }

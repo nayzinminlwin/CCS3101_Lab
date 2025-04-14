@@ -6,8 +6,8 @@ public class Quadrilateral {
     private Line lineC;
     private Line lineD;
  
-    protected boolean parallelAC;
-    protected boolean parallelBD;
+    protected boolean parallelAC = false;
+    protected boolean parallelBD = false;
 
     // final int degreeAB;
     // final int degreeBC;
@@ -25,9 +25,6 @@ public class Quadrilateral {
         Line.LineConnect(lineB, lineC);
         Line.LineConnect(lineC, lineD);
         Line.LineConnect(lineD, lineA);
-
-        this.parallelAC = false;
-        this.parallelBD = false;
     }
 
     public double CalculateArea()
@@ -39,5 +36,11 @@ public class Quadrilateral {
         int S2 = (lineAPoints[1]*lineAPoints[2])+(lineAPoints[3]*lineBPoints[2])+(lineCPoints[1]*lineCPoints[2])+(lineCPoints[3]*lineAPoints[0]);
         double area = (Math.abs(S1-S2))/2;
         return area;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Quadrilateral : ";
     }
 }

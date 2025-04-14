@@ -9,4 +9,10 @@ public class Trapezoid extends Quadrilateral{
         super.parallelAC = false;
         super.parallelBD = true;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Trapezoid : ";
+    }
 }

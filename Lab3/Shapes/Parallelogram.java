@@ -9,4 +9,10 @@ public class Parallelogram extends Quadrilateral{
         super.parallelAC = true;
         super.parallelBD = true;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Parallelogram : ";
+    }
 }

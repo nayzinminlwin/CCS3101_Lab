@@ -15,4 +15,10 @@ public class Rectangle extends Quadrilateral{
         this.degreeAB = 90;
         this.degreeBC = 90;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Rectangle : ";
+    }
 }
