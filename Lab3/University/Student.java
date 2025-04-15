@@ -2,24 +2,24 @@ package Lab3.University;
 
 public class Student extends Person{
 
-    private final String classStatus;
+    private ClassStatus classStatus;
 
     Student()
     {
         super();
         this.setName("Unknown Student");
-        this.classStatus = "NULL";
+        this.classStatus = new ClassStatus("freshman");
     }
 
-    Student(String name,String address,String phoneNum, String email,String classStatus)
+    Student(String name,String address,String phoneNum, String email,String classStatusString)
     {
         super(name, address, phoneNum, email);
-        this.classStatus = classStatus;
+        this.classStatus = new ClassStatus(classStatusString);
     }
 
     @Override
     public String toString()
     {
-        return String.format("Student : %s \n",this.getName());
+        return String.format("Student : %s \nStudent status : %s \n ",this.getName(),this.classStatus.getClassStatus());
     }
 }
