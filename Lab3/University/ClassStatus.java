@@ -8,6 +8,7 @@ public class ClassStatus{
         this.classStatus = classStatus;
     }
 
+    // getter function
     public String getClassStatus()
     {
         return this.classStatus;

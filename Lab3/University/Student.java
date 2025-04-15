@@ -4,6 +4,7 @@ public class Student extends Person{
 
     private ClassStatus classStatus;
 
+    // Constructor with no parameters
     Student()
     {
         super();
@@ -11,6 +12,7 @@ public class Student extends Person{
         this.classStatus = new ClassStatus("freshman");
     }
 
+    // Constructor with parameters
     Student(String name,String address,String phoneNum, String email,String classStatusString)
     {
         super(name, address, phoneNum, email);
