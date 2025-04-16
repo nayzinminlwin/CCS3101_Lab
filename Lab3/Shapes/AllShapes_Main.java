@@ -48,6 +48,7 @@ public class AllShapes_Main {
         // System.out.println(s1);
 
         // Quadrilateral mainQuadrilateral = new Quadrilateral(lineA, lineB, lineC, lineD);
+        // Polymorphism of Child class into Parent Quadrilateral
         Quadrilateral q0 = ShapeFactory.createShape(lineA, lineB, lineC, lineD);
         System.out.print(q0.toString());
         System.out.print("area "+q0.CalculateArea());
