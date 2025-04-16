@@ -4,28 +4,28 @@ public class AllShapes_Main {
     public static void main(String[] args) {
 
         // // Square
-        CalculateArea(new int[][]{{1,5},{1,1},{5,1},{5,5}});
+        Calculate_Shape_n_Area(new int[][]{{1,5},{1,1},{5,1},{5,5}});
         // Point pointA = new Point(1,5);
         // Point pointB = new Point(1,1);
         // Point pointC = new Point(5,1);
         // Point pointD = new Point(5,5);
 
         // Rectangle
-        CalculateArea(new int[][]{{2,0},{0,4},{2,5},{4,1}});
+        Calculate_Shape_n_Area(new int[][]{{2,0},{0,4},{2,5},{4,1}});
         // Point pointA = new Point(2,0);
         // Point pointB = new Point(0,4);
         // Point pointC = new Point(2,5);
         // Point pointD = new Point(4,1);
 
         // // parallelogram
-        CalculateArea(new int[][]{{2,2},{5,5},{9,5},{6,2}});
+        Calculate_Shape_n_Area(new int[][]{{2,2},{5,5},{9,5},{6,2}});
         // Point pointA = new Point(2,2);
         // Point pointB = new Point(5,5);
         // Point pointC = new Point(9,5);
         // Point pointD = new Point(6,2);
 
         // // Trapezoid
-        CalculateArea(new int[][]{{2,2},{5,6},{11,6},{14,2}});
+        Calculate_Shape_n_Area(new int[][]{{2,2},{5,6},{11,6},{14,2}});
         // Point pointA = new Point(2,2);
         // Point pointB = new Point(5,6);
         // Point pointC = new Point(11,6);
@@ -58,7 +58,7 @@ public class AllShapes_Main {
         // System.out.print("area "+q0.CalculateArea());
     }
 
-    public static void CalculateArea(int[][] xy)
+    public static void Calculate_Shape_n_Area(int[][] xy)
     {
         // point assignment according to x and y coordinates
         Point pointA = new Point(xy[0][0],xy[0][1]);
