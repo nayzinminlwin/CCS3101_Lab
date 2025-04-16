@@ -72,6 +72,8 @@ public class AllShapes_Main {
         Line lineC = new Line(pointC, pointD);
         Line lineD = new Line(pointD, pointA);
 
+        // System.out.println(lineD.getLine());
+
         // Shape initialization and Output
         Quadrilateral q0 = ShapeFactory.createShape(lineA, lineB, lineC, lineD);
         System.out.print(q0.toString());

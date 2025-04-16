@@ -14,7 +14,7 @@ public class Line {
     // getter for the Line
     public String getLine()
     {
-        return String.format("(%c,%c)---(%c,%c) \n",this.pointA.getX(),this.pointA.getY(), this.pointB.getX(),this.pointB.getY());
+        return String.format("(%d,%d)---(%d,%d) \n",this.pointA.getX(),this.pointA.getY(), this.pointB.getX(),this.pointB.getY());
     }
 
     // getter & setter for point A
