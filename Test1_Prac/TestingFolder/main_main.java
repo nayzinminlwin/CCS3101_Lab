@@ -112,12 +112,12 @@ class Ride {
     }
 }
 
-public class main {
+public class main_main {
     public static void main(String[] args) {
         Passenger passenger1 = new Passenger("Ryan", 123);
         Driver driver1 = new Driver("Iqmal", 321);
         Ride newRide = new Ride(driver1, passenger1, 0, 10);
 
-        System.out.println(passenger1);
+        System.out.println(newRide);
     }
 }
