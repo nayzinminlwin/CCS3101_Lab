@@ -15,11 +15,15 @@ public class mainClass
         Loan studentLoan = new Loan(8000, 10, startDate, endDate);
         String o_i_a_cat = "O-i-i-a-i-o, o-i-i-i-a-i";
 
+        // creating arraylist storing objects
         ArrayList<Object> campur = new ArrayList<Object>();
+        
+        // adding objects into the arraylist
         // Collections.addAll(campur,circle0,o_i_a_cat,startDate,endDate,studentLoan);
         // campur.addAll(Arrays.asList(circle0,o_i_a_cat,startDate,endDate,studentLoan));
         campur.addAll(List.of(circle0,o_i_a_cat,startDate,endDate,studentLoan));
 
+        // looping and displaying the polymorphism
         for (Object OO : campur) {
             System.out.println(OO.toString());
         }

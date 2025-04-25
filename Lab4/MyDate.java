@@ -6,6 +6,7 @@ public class MyDate
     private int month;
     private int year;
 
+    // Full perimeter constructor
     MyDate(int d, int m, int y)
     {
         this.day = d;
@@ -13,6 +14,7 @@ public class MyDate
         this.year = y;
     }
 
+    // getters
     public int getYear()
     {
         return this.year;
@@ -26,6 +28,7 @@ public class MyDate
         return this.day;
     }
 
+    // the almighty counting days function between two dates
     public static int CountDays(MyDate d1, MyDate d2)
     {
         int yearCount = d2.getYear() - d1.getYear();
@@ -49,14 +52,16 @@ public class MyDate
         }
 
         int totalDay = (yearCount * 365) + (monthCount*30) + dayCount;
+        
+        // System.out.println("daycount : " +totalDay);
 
         // if totalDay<0, it is endDate < startDate
-        totalDay = totalDay>=0 ? totalDay: 0;
+        // totalDay = totalDay>=0 ? totalDay: 0;
 
-        // System.out.println("daycount : " +totalDay);
         return totalDay;
     }
 
+    @Override
     public String toString()
     {
         String rString = String.format("%d-%d-%d", this.getDay(),this.getMonth(),this.getYear());
