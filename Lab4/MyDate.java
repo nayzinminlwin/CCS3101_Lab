@@ -55,8 +55,12 @@ public class MyDate
         
         // System.out.println("daycount : " +totalDay);
 
-        // if totalDay<0, it is endDate < startDate
+        // // if totalDay<0, it is endDate < startDate
         // totalDay = totalDay>=0 ? totalDay: 0;
+        
+        // // if minusValue, i will recursively call the funtion with swapped values.
+        // if(totalDay<0)
+        //     totalDay = CountDays(d2, d1);
 
         return totalDay;
     }
