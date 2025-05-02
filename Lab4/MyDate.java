@@ -58,7 +58,8 @@ public class MyDate
         // // if totalDay<0, it is endDate < startDate
         // totalDay = totalDay>=0 ? totalDay: 0;
         
-        // // if minusValue, i will recursively call the funtion with swapped values.
+        // // if minusValue, it is likely user inserted the dates in reversed.
+        // // so, i will recursively call the function with swapped values.
         // if(totalDay<0)
         //     totalDay = CountDays(d2, d1);
 
