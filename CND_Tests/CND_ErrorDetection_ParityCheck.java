@@ -43,12 +43,13 @@ public class CND_ErrorDetection_ParityCheck {
     public static String[] partialCheck_encoding(String userString) {
         String[] encodedData = new String[userString.length()];
 
+        // looping String to encode each char inside the string
         for (int i = 0; i < userString.length(); i++) {
 
-            // revised function for encoding each character
             // Use either of the two functions here
             // userArr[i] = particalCheck_encode_char(userString.charAt(i));
             encodedData[i] = my_particalCheck_encode_char(userString.charAt(i));
+            // encoded and insert into encodedDate[currentRoom]
         }
 
         return encodedData;
@@ -60,14 +61,14 @@ public class CND_ErrorDetection_ParityCheck {
 
         // Count 1s in Binary String
         int oneCount = 0;
-        // making "11000011" -> [1,1,0,0,0,0,1,1]
-        // so i can count 1s now.
+        // making "11000011".toCharArray() -> [1,1,0,0,0,0,1,1]
         for (char bit : userBinary.toCharArray()) {
+            // so i can count 1s now.
             if (bit == '1')
                 oneCount++;
         }
 
-        // Add parity bit
+        // Add parity bit to the last
         if (oneCount % 2 == 0)
             return userBinary + "0"; // if 1 count is even, pad 0
         else
@@ -96,7 +97,7 @@ public class CND_ErrorDetection_ParityCheck {
     }
 
     public static void receiveData(String[] encodedData) {
-        // just printing
+        // just printing received Binary bits
         System.out.print("received data . . . ");
         for (String s : encodedData)
             System.out.print(s);
@@ -113,7 +114,7 @@ public class CND_ErrorDetection_ParityCheck {
         System.out.println();
     }
 
-    // Decoding Funtion : this function will the opposite of Encoding function
+    // Decoding Funtion : this function will do the opposite of Encoding function
     public static String[] partialCheck_decoding(String[] encodedData) {
 
         String[] orginalMessage = new String[encodedData.length];
@@ -134,8 +135,8 @@ public class CND_ErrorDetection_ParityCheck {
                 String binaryWithoutParity = currentData.substring(0, currentData.length() - 1);
 
                 // Convert binary to char
-                int ascii = Integer.parseInt(binaryWithoutParity, 2);
-                orginalMessage[i] = String.valueOf((char) ascii);
+                int ascii = Integer.parseInt(binaryWithoutParity, 2); // binary -> decimal(ASCII)
+                orginalMessage[i] = String.valueOf((char) ascii); // ASCII -> char
             } else {
 
                 System.out.println("Message interrupted!!!");
@@ -157,12 +158,12 @@ public class CND_ErrorDetection_ParityCheck {
 
     // requesting the lost/disturbed bit function
     public static String[] requestFaultBit(int i) {
-        // get direct char from userMessage
+        // get char direct from userMessage
         // then send it with sendData function
         String[] requestedBit = sendData(String.valueOf(userMessage.charAt(i)));
         System.out.println("Resending interrupted bit..." + requestedBit[0]);
 
-        // this is encoded Bit string got from sendData function
+        // this is encoded BitString got from sendData function
         return requestedBit;
     }
 }

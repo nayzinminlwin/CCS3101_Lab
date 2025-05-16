@@ -1,10 +1,9 @@
 package Test1_Prac;
 
-public class mainRides{
-    public static void main(String[] args)
-    {
+public class mainRides {
+    public static void main(String[] args) {
         Driver d1 = new Driver("Encik", 601777777);
-        Driver d2 = new Driver("Tuan",60888888);
+        Driver d2 = new Driver("Tuan", 60888888);
 
         Passenger p1 = new Passenger("Cik", 9999);
         Passenger p2 = new Passenger("Siapa", 898989);
@@ -21,13 +20,14 @@ public class mainRides{
         rides[3] = r4;
         int rideCounts = rides.length;
 
-        for(int i=0;i<rideCounts;i++)
-        {
-            if(rides[i]==null) continue;
-            System.out.printf("Ride ID : %s \nDriver : %s \nFare : %s\n", rides[i].getRideID(),rides[i].getDriver().getName(),rides[i].getFare());
+        for (int i = 0; i < rideCounts; i++) {
+            if (rides[i] == null)
+                continue;
+            System.out.printf("Ride ID : %s \nDriver : %s \nFare : %s\n", rides[i].getRideID(),
+                    rides[i].getDriver().getName(), rides[i].getFare());
         }
 
-        System.out.println("Total rides created is : "+ Ride.getRideCount());
-        
+        System.out.println("Total rides created is : " + Ride.getRideCount());
+
     }
 }
