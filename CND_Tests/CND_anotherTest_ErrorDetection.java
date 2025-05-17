@@ -1,13 +1,13 @@
 public class CND_anotherTest_ErrorDetection {
 
     public static void main(String[] args) {
-        String userData = "Hi";
+        String userData = "Hello !";
 
         // send userData via sendData function, it will return the encodedBinary data
         String[] encodedData = sendData(userData);
         System.out.println();
 
-        // toggle this cmt to see message interrupted.
+        // toggle following cmt to see message interrupted.
         // encodedData[4] = "0";
 
         // decoding function ; fromt binary back to original msg
