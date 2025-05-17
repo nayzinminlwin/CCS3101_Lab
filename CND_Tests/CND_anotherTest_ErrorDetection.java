@@ -20,7 +20,7 @@ public class CND_anotherTest_ErrorDetection {
 
         // encoded data array will be same size with userData length
         // if user data : "Hi" ;
-        // encodedData will be : ["10010001101001",".10010001101001"]
+        // encodedData will be : ["10010001101001","10010001101001"]
         // one array room for one char each.
         String[] encodedData = new String[userData.length()];
 
@@ -32,18 +32,18 @@ public class CND_anotherTest_ErrorDetection {
             char aChar = userData.charAt(i);
             // System.out.println(aChar); // current char
 
+            // the ultimate function doing the task
+            // current char -> binaryString
             String binaryData = Integer.toBinaryString(aChar);
             // System.out.println(binaryData);
+
             encodedData[i] = binaryData; // masuk binaryData into current room of encodedData Array
         }
 
-        // the following 4 lines is just printing sexy 0 and 1s.
-        System.out.print("Sending data . . .");
-        for (String string : encodedData) {
-            System.out.print(string);
-        }
+        // the following line is just printing sexy 0 and 1s.
+        System.out.print("Sending data . . ." + String.join("", encodedData));
 
-        // return to catch encodedData inside main method
+        // return encodedData, so main method can fetch it;
         return encodedData;
     }
 
@@ -53,7 +53,7 @@ public class CND_anotherTest_ErrorDetection {
         // just sexy printing
         System.out.println("Received Bits . . ." + String.join("", encodedData));
 
-        // the translate message from binary to char will added into this
+        // the translated message from binary to char will added into this
         // originalMessage variable
         String originalMessage = "";
 
@@ -64,14 +64,16 @@ public class CND_anotherTest_ErrorDetection {
 
             // // parseInt function will change binary to decimal
             // int myAscii = Integer.parseInt(currentRoom, 2);
+            // System.out.println("Current ASCII : " + myAscii);
             // // 2 in second parameter mean Binary, if 16, it is saying HEXA
+
             // // typecasting ASCII int to char // java know itself
             // char myChar = (char) myAscii;
 
             // the two lines commented above, written in one line.
             char myChar = (char) Integer.parseInt(currentRoom, 2);
 
-            // System.out.println("First Char : " + myChar);
+            // System.out.println("Current Char : " + myChar);
 
             // adding char to string is simple
             // originalMessage = originalMessage + myChar;
