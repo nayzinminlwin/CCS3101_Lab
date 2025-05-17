@@ -34,7 +34,7 @@ public class CND_anotherTest_ErrorDetection {
 
             String binaryData = Integer.toBinaryString(aChar);
             // System.out.println(binaryData);
-            encodedData[i] = binaryData; // masuk binaryData into encodedData Array
+            encodedData[i] = binaryData; // masuk binaryData into current room of encodedData Array
         }
 
         // the following 4 lines is just printing sexy 0 and 1s.
