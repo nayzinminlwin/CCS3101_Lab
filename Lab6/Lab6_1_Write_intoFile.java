@@ -7,9 +7,14 @@ import java.io.PrintWriter;
 public class Lab6_1_Write_intoFile {
 
     public static void main(String[] args) {
+
+        // an array and a two dimentional array Mimicing the Key : Value Pair Mapping
+        // rank names
         String[] ranks = { "assistant", "associate", "full" };
+        // min salary and max salary for each
         int[][] salaries = { { 50000, 80000 }, { 60000, 110000 }, { 75000, 130000 } };
 
+        // Creating file and writing
         File myFile = new File("Lab6/Salary.txt");
         try (PrintWriter output = new PrintWriter(myFile);) {
 
@@ -20,8 +25,10 @@ public class Lab6_1_Write_intoFile {
                 String rank = ranks[randRank];
                 double salary = (Math.random() * (salaries[randRank][1] - salaries[randRank][0]))
                         + salaries[randRank][0];
+
+                // Now line to be printed is ready
                 String line = String.format("%s %s %s %.2f", fName, lName, rank, salary);
-                output.println(line);
+                output.println(line); // printed into file
             }
 
         } catch (FileNotFoundException e) {
