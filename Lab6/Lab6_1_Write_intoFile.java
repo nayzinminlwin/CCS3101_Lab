@@ -34,7 +34,6 @@ public class Lab6_1_Write_intoFile {
         } catch (FileNotFoundException e) {
             System.out.println("File not found!");
         }
-
     }
 
 }

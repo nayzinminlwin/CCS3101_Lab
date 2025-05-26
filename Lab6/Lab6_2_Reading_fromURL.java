@@ -1,6 +1,5 @@
 package Lab6;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -23,7 +22,8 @@ public class Lab6_2_Reading_fromURL {
         // int fullCount = 0;
         // double full_SalarySum = 0;
 
-        // new way with list and arrays, with indexes
+        //
+        // new way with list and arrays, with indexes mimicking Hashmap
 
         // ranks is initialized as list for IndexOf function,
         // Because arrays in java dont have indexOf function
@@ -31,6 +31,9 @@ public class Lab6_2_Reading_fromURL {
 
         // for storing count and Salary Sum for each 3 ranks
         double[][] count_n_salSum = { { 0, 0 }, { 0, 0 }, { 0, 0 } };
+
+        // ranks arrayList and count&SalarySum will behave as a key-value pair mapping.
+        // ranks as key and rooms of count&SalarySum will be values.
 
         try {
             // getting data from destination URL
@@ -54,10 +57,10 @@ public class Lab6_2_Reading_fromURL {
             }
             // printing for all 3 positions
             for (int i = 0; i < ranks.size(); i++) {
+                System.out.println();
                 System.out.printf("Number of %s : %.0f\n", ranks.get(i), count_n_salSum[i][0]);
                 System.out.printf("Total Salary : %.2f\n", count_n_salSum[i][1]);
                 System.out.printf("Average Salary : %.2f\n", (count_n_salSum[i][1] / count_n_salSum[i][0]));
-                System.out.println();
             }
 
         } catch (FileNotFoundException fnfEx) {
