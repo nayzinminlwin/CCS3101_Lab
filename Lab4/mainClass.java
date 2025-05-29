@@ -5,11 +5,10 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class mainClass
-{
+public class mainClass {
     public static void main(String[] args) {
 
-        Circle circle0 = new Circle(20,true);
+        Circle circle0 = new Circle(20, true);
         MyDate startDate = new MyDate(12, 12, 2024);
         MyDate endDate = new MyDate(11, 1, 2025);
         Loan studentLoan = new Loan(8000, 10, startDate, endDate);
@@ -17,15 +16,20 @@ public class mainClass
 
         // creating arraylist storing objects
         ArrayList<Object> campur = new ArrayList<Object>();
-        
+
         // adding objects into the arraylist
         // Collections.addAll(campur,circle0,o_i_a_cat,startDate,endDate,studentLoan);
         // campur.addAll(Arrays.asList(circle0,o_i_a_cat,startDate,endDate,studentLoan));
-        campur.addAll(List.of(circle0,o_i_a_cat,startDate,endDate,studentLoan));
+        campur.addAll(List.of(circle0, o_i_a_cat, startDate, endDate, studentLoan));
 
         // looping and displaying the polymorphism
         for (Object OO : campur) {
             System.out.println(OO.toString());
+            if (OO instanceof Circle) {
+                System.out.println("Circle area is " + ((Circle) OO).calcuateArea());
+            }
         }
+
+        // System.out.println(circle0 instanceof Object);
     }
 }
