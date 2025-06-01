@@ -1,0 +1,54 @@
+Speaker Output (Default methods)
+
+1. Speaker: default speak()
+2. BaseSpeaker announces : hello
+
+3. AdvanceSpeaker : overridden speak()
+4. AdvancedSpeaker announces loudly: HELLO
+
+5. AdvanceSpeaker : overridden speak()
+6. AdvancedSpeaker announces loudly: BYE
+
+7. Speaker: default speak()
+8. Anon announces: test
+
+
+Parent and Child Display (Static override)
+
+1. Child.display(int): 10
+
+x 2. Child.display(String): Hello
+-> 2. Parent.display(Object): Hello
+
+3. Child.display(int): 20
+4. Child.display(String): World
+
+5. Parent.display(Object): "Test"
+
+6. Parent.print()
+7. Child.print()
+8. Parent.print()
+
+Dogs and Cat extend Animal (Polymorphic Arrays & Covariant returns)
+
+1. Dog
+2. Woof!
+
+3. Cat
+4. Meow!
+
+5. Unknown Animal
+6. No specific sound
+
+7. list.get(1).getName(): Cat
+
+Apples and Oranges extend Fruits (Polymorphism and Covariant Return Types)
+
+1. Apple.getColor() returning an Apple reference
+2. This is an Apple
+
+3. Banana.getColor() returning a Banana reference
+4. Peeling Banana
+
+5. Apple.getColor() returning an Apple reference
+6. Caught a ClassCastException
