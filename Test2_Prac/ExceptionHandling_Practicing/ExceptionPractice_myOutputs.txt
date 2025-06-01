@@ -1,0 +1,62 @@
+TestException1 : Base and Derived throw exceptions
+
+1. Caught runtime: Derived Runtime <-
+2. Finally block
+3. After try-catch
+
+TestException2
+
+1. Caught FNFE
+2. methodA finally
+3. Caught in main: Wrapped IOException
+
+TestException3 : Exception in Constructor and finally
+
+1. Resource constructor start
+2. Caught in main: Constructor Exception
+3. In finally, closing resource if not null
+4. No resource to close
+5. After try-catch-finally
+
+TestException4: Multi-Catch and Rethrow
+
+if (System.currentTimeMillis() % 2 == 0)
+1. Caught in methodA: FileNotFoundException
+2. methodA finally block
+3. Caught IOException in main: config.txt not found
+4. main finally block
+5. End of main
+
+else
+1. Caught in methodA: SQLException
+2. methodA finally block
+3. Caught SQLException in main: Database unreachable
+4. main finally block
+5. End of main
+
+TestException5: Nested try-catch and Custom exception
+
+1. ---- Processing: 42 ----
+2. Parsed value: 42
+3. parseData finally
+4. parseData succeeded
+5. main finally for input: 42
+
+6. ---- Processing: null ----
+7. parseData finally
+8. Caught IOException in main: Data is null
+9. main finally for input: null
+
+10. ---- Processing: -7 ----
+11. parseData finally
+-> 12. Caught InvalidDataException in main: Negative not allowed
+13. main finally for input: -7
+
+14. ---- Processing: abc ----
+X 15. Caught NumberFormatException: 
+-> 15. Caught NumberFormatException: For input string: "abc"
+16. parseData finally
+17. Caught IOException in main: Wrapped NumberFormatException
+18. main finally for input: abc
+
+19. Loop complete
