@@ -1,4 +1,4 @@
-package Test2_Prac;
+package Test2_Prac.Polymorphism_Practicing;
 
 public class MethodBinding_PolymorphismDemo {
   public static void main(String[] args) {

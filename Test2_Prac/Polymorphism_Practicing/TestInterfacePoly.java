@@ -1,4 +1,4 @@
-package Test2_Prac;
+package Test2_Prac.Polymorphism_Practicing;
 
 interface Speaker {
     default void speak() {

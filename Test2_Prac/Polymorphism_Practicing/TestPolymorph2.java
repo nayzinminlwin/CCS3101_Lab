@@ -1,4 +1,4 @@
-package Test2_Prac;
+package Test2_Prac.Polymorphism_Practicing;
 
 abstract class Shape {
     abstract double area();
