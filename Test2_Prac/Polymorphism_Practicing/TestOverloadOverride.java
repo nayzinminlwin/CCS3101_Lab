@@ -1,4 +1,4 @@
-package Test2_Prac.Polymorphism_Practicing;
+package Test2_Prac;
 
 class Parent {
     public void display(int x) {
