@@ -11,7 +11,7 @@ public class Lab6_1_Write_intoFile {
         // an array and a two dimentional array Mimicing the Key : Value Pair Mapping
         // rank names
         String[] ranks = { "assistant", "associate", "full" };
-        // min salary and max salary for each
+        // min salary and max salary for each rank
         int[][] salaries = { { 50000, 80000 }, { 60000, 110000 }, { 75000, 130000 } };
 
         // Creating file and writing
