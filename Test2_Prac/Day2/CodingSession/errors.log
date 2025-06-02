@@ -1,0 +1,3 @@
+Malformed line (expected 4 columns ) : S001,80,90,70,90
+Detected a string instead of number at Student ID : S003 at S003
+Detected a string instead of number at Student ID : S005 at S005
