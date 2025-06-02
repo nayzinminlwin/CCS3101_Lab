@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class StudentGradeProcessor {
-    public static String errorLogs = "";
+    public static final ArrayList<String> errorLogs = new ArrayList<>();
 
     public static void main(String[] args) {
         String parentPath = "Test2_Prac/Day2/CodingSession/";
@@ -23,55 +23,56 @@ public class StudentGradeProcessor {
             writeReport(students, repotFilePath);
 
         } catch (FileNotFoundException fnfEx) {
-            errorLogs += fnfEx.getMessage() + "\n";
+            errorLogs.add(fnfEx.getMessage());
         } finally {
-            logError(errorLogs, errorFilePath);
+            logError(errorFilePath);
         }
 
     }
 
     public static void writeReport(ArrayList<Student> students, String filePath) {
         File reportFile = new File(filePath);
-        if (reportFile.exists()) {
-            System.out.println("Report File already exits");
-            reportFile.delete();
-            System.exit(0);
-        }
+
         try (PrintWriter output = new PrintWriter(reportFile)) {
             for (Student s : students) {
                 output.printf("%s : %.2f\n", s.id, s.avg);
             }
         } catch (FileNotFoundException fnfEx) {
-            errorLogs += "Report File not found to be written\n";
+            errorLogs.add("Report File not found to be written");
         }
 
     }
 
-    public static void logError(String errorLogs, String filePath) {
-        File erroFile = new File(filePath);
-        if (erroFile.exists()) {
-            System.out.println("Error file already exist!!");
-            erroFile.delete();
-            System.exit(1);
-        }
-        try (PrintWriter output = new PrintWriter(erroFile)) {
-            output.println(errorLogs);
+    public static void logError(String filePath) {
+        File errorFile = new File(filePath);
+
+        try (PrintWriter output = new PrintWriter(errorFile)) {
+            for (String erLog : errorLogs) {
+                output.println(erLog);
+            }
+
         } catch (FileNotFoundException fnfEx) {
-            errorLogs += "ErrorFile not found to be written!\n";
-            logError(errorLogs, filePath);
+            // errorLogs += "ErrorFile not found to be written!\n";
+            // logError(errorLogs, filePath);
+            errorLogs.add("ErrorFile not found." + fnfEx.getMessage());
+            System.err.println("ErrorLogs file not found!!" + fnfEx.getMessage());
         }
     }
 
-    public static ArrayList<Student> readGrades(String filePath)
-            throws FileNotFoundException, NullPointerException, NumberFormatException {
+    public static ArrayList<Student> readGrades(String filePath) throws FileNotFoundException {
 
         File grades = new File(filePath);
         ArrayList<Student> students = new ArrayList<>();
 
         try (Scanner sc = new Scanner(grades)) {
-            while (sc.hasNextLine()) {
-                String[] studentData = sc.nextLine().split(",");
-                String id = studentData[0];
+            mainWhile: while (sc.hasNextLine()) {
+                String currentLine = sc.nextLine();
+                String[] studentData = currentLine.split(",");
+                if (studentData.length > 4) {
+                    errorLogs.add("Malformed line (expected 4 columns ) : " + currentLine);
+                    continue mainWhile;
+                }
+                String id = studentData[0].trim();
                 double totalMark = 0;
                 try {
                     for (int i = 1; i < studentData.length; i++)
@@ -80,13 +81,15 @@ public class StudentGradeProcessor {
                     Student s = new Student(id, avg);
                     students.add(s);
                 } catch (NumberFormatException nbfEx) {
-                    errorLogs += "detected a string instead of number." + nbfEx.getMessage() + "\n";
+                    errorLogs
+                            .add("Detected a string instead of number at Student ID : " + id);
                 } catch (NullPointerException npEx) {
-                    errorLogs += "Cant access null value." + npEx.getMessage() + "\n";
+                    errorLogs.add("Trying to access null value at : " + id);
                 }
             }
 
         } catch (FileNotFoundException fnfEx) {
+            errorLogs.add("Grades.csv not Found!!" + fnfEx.getMessage());
             throw new FileNotFoundException("Grades.csv not Found!!");
         }
 
