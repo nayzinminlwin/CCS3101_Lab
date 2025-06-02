@@ -54,7 +54,9 @@ public class StudentGradeProcessor {
         } catch (FileNotFoundException fnfEx) {
             // errorLogs += "ErrorFile not found to be written!\n";
             // logError(errorLogs, filePath);
-            errorLogs.add("ErrorFile not found." + fnfEx.getMessage());
+
+            // errorLogs.add("ErrorFile not found." + fnfEx.getMessage());
+
             System.err.println("ErrorLogs file not found!!" + fnfEx.getMessage());
         }
     }
@@ -73,7 +75,7 @@ public class StudentGradeProcessor {
                     continue mainWhile;
                 }
                 String id = studentData[0].trim();
-                double totalMark = 0;
+                int totalMark = 0;
                 try {
                     for (int i = 1; i < studentData.length; i++)
                         totalMark += Integer.parseInt(studentData[i]);
@@ -83,8 +85,6 @@ public class StudentGradeProcessor {
                 } catch (NumberFormatException nbfEx) {
                     errorLogs
                             .add("Detected a string instead of number at Student ID : " + id);
-                } catch (NullPointerException npEx) {
-                    errorLogs.add("Trying to access null value at : " + id);
                 }
             }
 
