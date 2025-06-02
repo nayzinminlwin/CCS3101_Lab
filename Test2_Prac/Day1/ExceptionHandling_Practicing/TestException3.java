@@ -1,4 +1,4 @@
-package Test2_Prac.ExceptionHandling_Practicing;
+package Test2_Prac.Day1.ExceptionHandling_Practicing;
 
 class Resource {
     Resource() throws Exception {

@@ -1,4 +1,4 @@
-package Test2_Prac.Polymorphism_Practicing;
+package Test2_Prac.Day1.Polymorphism_Practicing;
 
 class A {
     void show() {
