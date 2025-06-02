@@ -106,7 +106,7 @@ public class StudentGradeProcessor {
 
         @Override
         public int compareTo(Student s0) {
-            return Double.compare(this.avg, s0.avg);
+            return Double.compare(s0.avg, this.avg);
         }
     }
 }
