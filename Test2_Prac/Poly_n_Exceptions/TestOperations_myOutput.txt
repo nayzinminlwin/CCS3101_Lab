@@ -1,0 +1,34 @@
+Poly and Exceptions Tracing 
+
+Program 1 : TestOperations.java
+
+1. ---- Executing Operation ----
+2. Operation.perform()
+3. Result: 15
+4. execute() finally block for Operation
+5.
+6. ---- Executing Division ----
+7. Division.perform()
+8. Result: 5
+9. execute() finally block for Division
+10.
+11. ---- Executing Division ----
+12. Division.perform()
+13. Caught DivisionException: Cannot divide by zero
+14. execute() finally block for Division
+15. 
+16. ---- Executing Modulus ----
+17. Modulus.perform()
+18. Result: 1
+19. execute() finally block for Modulus
+20. 
+21. ---- Executing Modulus ----
+22. Modulus.perform()
+23. Caught ModulusException: Cannot modulus by zero
+24. execute() finally block for Modulus
+25.
+26. ---- Executing FaultyOperation ----
+27. FaultyOperation.perform()
+28. Caught RuntimeException: Fault inside FaultyOperation
+29. execute() finally block for FaultyOperation
+30. 

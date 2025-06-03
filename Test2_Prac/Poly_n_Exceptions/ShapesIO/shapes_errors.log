@@ -1,0 +1,4 @@
+Line 3: Circle radius must be positive
+Line 4: Missing dimensions in: Rectangle,7.5
+Line 5: Unknown shape type: Triangle
+Line 6: Invalid number format in: Rectangle,abc,2.0

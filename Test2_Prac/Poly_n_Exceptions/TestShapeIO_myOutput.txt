@@ -1,0 +1,41 @@
+Poly and Exceptions Tracing 
+
+shapes.txt
+Circle,5.0
+Rectangle,4.0,3.0
+Circle,-2.0
+Rectangle,7.5
+Triangle,3.0,4.0
+Rectangle,abc,2.0
+
+Program 2: TestShapeIO.java
+
+1. Reading line 1: Circle,5.0
+2. Created Circle
+
+3. Reading line 2: Rectangle,4.0,3.0
+4. Created Rectangle
+
+5. Reading line 3: Circle,-2.0
+e1. Line 3: Circle radius must be positive\n
+6. Error: Circle radius must be positive
+
+7. Reading line 4: Rectangle,7.5
+e2. Line 4: Missing dimensions in: Rectangle,7.5\n
+8. Error: Missing dimensions in: Rectangle,7.5
+
+9. Reading line 5: Triangle,3.0,4.0
+e3. Line 5: Unknown shape type: Triangle
+10. Error: Unknown shape type: Triangle
+
+11. Reading line 6: Rectangle,abc,2.0
+e4. Line 6: Invalid number format in: Rectangle,abc,2.0\n
+12. Error: Invalid number format in: Rectangle,abc,2.0 
+
+o1. Circle area = 78.539...\n
+13. Wrote area for Circle
+
+o2. Rectangle area = 12.00\n
+14. Wrote area for Rectangle
+
+15. Processing complete. Check areas_report.txt and shapes_errors.log
