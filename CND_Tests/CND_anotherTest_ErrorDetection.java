@@ -1,3 +1,5 @@
+package CND_Tests;
+
 public class CND_anotherTest_ErrorDetection {
 
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package CND_Tests;
+
 import java.util.Scanner;
 
 public class CND_ErrorDetection_ParityCheck {
