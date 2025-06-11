@@ -21,10 +21,10 @@ public class Lab6_1_Write_intoFile {
             for (int i = 0; i < 1000; i++) {
                 String fName = "FirstName" + (i + 1);
                 String lName = "LastName" + (i + 1);
-                int randRank = (int) Math.round(Math.random() * 2);
-                String rank = ranks[randRank];
-                double salary = (Math.random() * (salaries[randRank][1] - salaries[randRank][0]))
-                        + salaries[randRank][0];
+                int rankIndex = (int) Math.round(Math.random() * 2);
+                String rank = ranks[rankIndex];
+                double salary = (Math.random() * (salaries[rankIndex][1] - salaries[rankIndex][0]))
+                        + salaries[rankIndex][0];
 
                 // Now line to be printed is ready
                 String line = String.format("%s %s %s %.2f", fName, lName, rank, salary);

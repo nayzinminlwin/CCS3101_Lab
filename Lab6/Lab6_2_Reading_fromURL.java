@@ -47,6 +47,7 @@ public class Lab6_2_Reading_fromURL {
 
                 // get nextLine -> split by space -> insert to array
                 String[] thisLineArr = sc.nextLine().split(" ");
+                // FirstName999 LastName999 full 117457.89
 
                 // if associate, count_n_Sal_Index -> 1;
                 int count_n_Sal_Index = ranks.indexOf(thisLineArr[2]);
@@ -61,6 +62,10 @@ public class Lab6_2_Reading_fromURL {
                 System.out.printf("Number of %s : %.0f\n", ranks.get(i), count_n_salSum[i][0]);
                 System.out.printf("Total Salary : %.2f\n", count_n_salSum[i][1]);
                 System.out.printf("Average Salary : %.2f\n", (count_n_salSum[i][1] / count_n_salSum[i][0]));
+
+                // Number of assistant : 154
+                // Total Salary : 9976887.52
+                // Average Salary : 64784.98
             }
 
         } catch (FileNotFoundException fnfEx) {

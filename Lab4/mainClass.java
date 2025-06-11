@@ -23,11 +23,11 @@ public class mainClass {
         campur.addAll(List.of(circle0, o_i_a_cat, startDate, endDate, studentLoan));
 
         // looping and displaying the polymorphism
-        for (Object OO : campur) {
-            System.out.println(OO.toString());
-            if (OO instanceof Circle) {
-                System.out.println("Circle area is " + ((Circle) OO).calcuateArea());
-            }
+        for (Object Obj : campur) {
+            System.out.println(Obj.toString());
+            // if (OO instanceof Circle) {
+            // System.out.println("Circle area is " + ((Circle) OO).calcuateArea());
+            // }
         }
 
         // System.out.println(circle0 instanceof Object);
