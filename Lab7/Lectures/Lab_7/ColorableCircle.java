@@ -13,7 +13,7 @@ public class ColorableCircle extends Circle implements Colorable {
     }
 
     @Override
-    public void howToColor() {
-        System.out.println("Color the whole circumference.");
+    public String howToColor() {
+        return "Color the whole circumference.";
     }
 }

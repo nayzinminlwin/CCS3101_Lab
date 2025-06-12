@@ -1,6 +1,6 @@
 package Lab7.Lectures.Lab_7;
 
-import Lab7.Lectures.GeometricObjects.*;;
+import Lab7.Lectures.GeometricObjects.*;
 
 public class Square extends GeometricObject implements Colorable {
     private double side;
@@ -37,8 +37,8 @@ public class Square extends GeometricObject implements Colorable {
     }
 
     @Override
-    public void howToColor() {
-        System.out.println("Color all four sides.");
+    public String howToColor() {
+        return "Color all four sides.";
     }
 
 }

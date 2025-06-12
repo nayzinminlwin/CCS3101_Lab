@@ -14,7 +14,7 @@ public class Test_Interface {
         myGeoObjs.add(new ColorableCircle(10));
 
         myGeoObjs.add(new Rectangle());
-        myGeoObjs.add(new Rectangle(10, 5));
+        myGeoObjs.add(new Rectangle(10, 5, "Red", true));
         myGeoObjs.add(new NonColorableRectangle());
         myGeoObjs.add(new NonColorableRectangle(5, 3));
 
@@ -24,7 +24,7 @@ public class Test_Interface {
             System.out.println(myGeoObj.toString());
             if (myGeoObj instanceof Colorable) {
                 // myGeoObj.howToColor();
-                ((Colorable) myGeoObj).howToColor();
+                System.out.println(((Colorable) myGeoObj).howToColor());
             }
             System.out.println();
         }
