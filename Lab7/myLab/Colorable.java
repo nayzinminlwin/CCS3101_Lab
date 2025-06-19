@@ -1,4 +1,4 @@
-package Lab7.Lectures.Lab_7;
+package Lab7.myLab;
 
 public interface Colorable {
     String howToColor();

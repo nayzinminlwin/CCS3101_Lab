@@ -1,0 +1,308 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "CND_ErrorDetection_ParityCheck",
+            "request": "launch",
+            "mainClass": "CND_Tests.CND_ErrorDetection_ParityCheck",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Lab1_Exercise_Q1",
+            "request": "launch",
+            "mainClass": "Lab1.Lab1_Exercise_Q1",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Lab1_Exercise_Q2",
+            "request": "launch",
+            "mainClass": "Lab1.Lab1_Exercise_Q2",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Lab2_Exercise_Q1",
+            "request": "launch",
+            "mainClass": "Lab2.Lab2_Exercise_Q1",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "AllShapes_Main",
+            "request": "launch",
+            "mainClass": "Lab3.Shapes.AllShapes_Main",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "mainClass",
+            "request": "launch",
+            "mainClass": "Lab3.University.mainClass",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "mainClass(1)",
+            "request": "launch",
+            "mainClass": "Lab4.mainClass",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Circles_with_radiusExceptions",
+            "request": "launch",
+            "mainClass": "Lab5.Circles_with_radiusExceptions",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Lab5_1_ArrayIndexOutOfBoundException_Program",
+            "request": "launch",
+            "mainClass": "Lab5.Lab5_1_ArrayIndexOutOfBoundException_Program",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Lab5_2_NumberFormatException",
+            "request": "launch",
+            "mainClass": "Lab5.Lab5_2_NumberFormatException",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "exceptionTesting",
+            "request": "launch",
+            "mainClass": "Lab5.exceptionTesting",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Lab6_1_Write_intoFile",
+            "request": "launch",
+            "mainClass": "Lab6.Lab6_1_Write_intoFile",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Lab6_2_Reading_fromURL",
+            "request": "launch",
+            "mainClass": "Lab6.Lab6_2_Reading_fromURL",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "printWriter_Testing",
+            "request": "launch",
+            "mainClass": "Lab6.printWriter_Testing",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestGeometricObject",
+            "request": "launch",
+            "mainClass": "Lab7.Lectures.GeometricObjects.TestGeometricObject",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "BabyAbstract",
+            "request": "launch",
+            "mainClass": "Lab7.Lectures.testing.BabyAbstract",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Testing",
+            "request": "launch",
+            "mainClass": "Lab7.Testing",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Test_Interface",
+            "request": "launch",
+            "mainClass": "Lab7.myLab.Test_Interface",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "GenerateRandIntFile",
+            "request": "launch",
+            "mainClass": "Lab8.GenerateRandIntFile",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "testingg",
+            "request": "launch",
+            "mainClass": "Lab8.testii.testingg",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "main_main",
+            "request": "launch",
+            "mainClass": "Test1_Prac.TestingFolder.main_main",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "mainRides",
+            "request": "launch",
+            "mainClass": "Test1_Prac.mainRides",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestException1",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.ExceptionHandling_Practicing.TestException1",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestException2",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.ExceptionHandling_Practicing.TestException2",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestException3",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.ExceptionHandling_Practicing.TestException3",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestException4",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.ExceptionHandling_Practicing.TestException4",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestException5",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.ExceptionHandling_Practicing.TestException5",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "MethodBinding_PolymorphismDemo",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.Polymorphism_Practicing.MethodBinding_PolymorphismDemo",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestCovariant",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.Polymorphism_Practicing.TestCovariant",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestInterfacePoly",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.Polymorphism_Practicing.TestInterfacePoly",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestOverloadOverride",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.Polymorphism_Practicing.TestOverloadOverride",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestPolyArray",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.Polymorphism_Practicing.TestPolyArray",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestPolymorph1",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.Polymorphism_Practicing.TestPolymorph1",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestPolymorph2",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.Polymorphism_Practicing.TestPolymorph2",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestShapeIO",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day1.Ultimate_Poly_n_Exceptions.TestShapeIO",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "StudentGradeProcessor",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day2.CodingSession.StudentGradeProcessor",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Read_studentScore",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day2.LectureReview.Read_studentScore",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Write_studentScore",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Day2.LectureReview.Write_studentScore",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestOperations",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Poly_n_Exceptions.TestOperations",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "TestShapeIO(1)",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Poly_n_Exceptions.TestShapeIO",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Test2_b",
+            "request": "launch",
+            "mainClass": "Test2_Prac.RewritingTest2.Test2_b",
+            "projectName": "Labs_654bb4e1"
+        },
+        {
+            "type": "java",
+            "name": "Testing(1)",
+            "request": "launch",
+            "mainClass": "Test2_Prac.Testing",
+            "projectName": "Labs_654bb4e1"
+        }
+    ]
+}

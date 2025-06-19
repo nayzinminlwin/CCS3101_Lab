@@ -1,4 +1,4 @@
-package Lab7.Lectures.Lab_7;
+package Lab7.myLab;
 
 import java.util.ArrayList;
 
