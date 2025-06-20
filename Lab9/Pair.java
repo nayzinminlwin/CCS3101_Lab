@@ -25,6 +25,7 @@ public class Pair<E> {
         this.secondObj = newE;
     }
 
+    // Bounded Wild card
     public static Number wildCard_min(Pair<? extends Number> p) {
         Number n1 = p.getFirst();
         Number n2 = p.getSecond();
@@ -32,6 +33,7 @@ public class Pair<E> {
         return n1.doubleValue() < n2.doubleValue() ? n1 : n2;
     }
 
+    // Bounded generic feature
     public static <U extends Number> U min(Pair<U> p) {
         U firstElem = p.getFirst();
         U secondElem = p.getSecond();
