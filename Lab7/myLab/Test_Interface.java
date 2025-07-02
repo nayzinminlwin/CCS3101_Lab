@@ -8,9 +8,9 @@ public class Test_Interface {
     public static void main(String[] args) {
         ArrayList<GeometricObject> myGeoObjs = new ArrayList<>();
 
-        myGeoObjs.add(new Circle());
+        // myGeoObjs.add(new Circle());
         myGeoObjs.add(new Circle(9));
-        myGeoObjs.add(new ColorableCircle());
+        // myGeoObjs.add(new ColorableCircle());
         myGeoObjs.add(new ColorableCircle(10));
 
         myGeoObjs.add(new Rectangle());

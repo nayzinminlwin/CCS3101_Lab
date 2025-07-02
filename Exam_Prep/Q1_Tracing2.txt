@@ -1,0 +1,44 @@
+Animal::<init> Rex
+Dog::<init> Rex
+Animal::<init> Luna
+Cat::<init> Luna
+Animal::<init> Sky
+Bird::<init> Sky
+
+makeThemSpeak start
+Animal::getName on Rex
+Dog::speak on Rex
+Rex says Woof!
+Animal::getName on Luna
+Cat::speak on Luna
+Luna says Meow?
+Animal::getName on Sky
+Bird:speak on Sky
+Sky says Tweet-tweet
+makeThemSpeak end
+
+Animal::<init> Max
+Dog::<init> Max
+Animal::getName on Max
+Sanctuary add: Max
+Animal::<init> Misty
+Cat::<init> Misty
+Animal::getName on Misty
+Sanctuary add: Misty
+Sanctuary listing: 
+Animal::getName on Max
+- Max
+Animal::getName on Misty
+- Misty
+
+Animal::<init> Bolt
+Dog::<init> Bolt
+Animal::getName on Bolt
+Sanctuary add: Bolt
+Sanctuary listing: 
+Animal::getName on Max
+- Max
+Animal::getName on Misty
+- Misty
+Animal::getName on Bolt
+- Bolt

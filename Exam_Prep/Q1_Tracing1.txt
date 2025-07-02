@@ -1,0 +1,24 @@
+Animal constructor: Rex
+Dog constructor: Rex
+Animal constructor: Mia
+Cat constructor: Mia
+printSpeak start
+getName() called on Rex
+speak() in Dog: Rex
+Rex says Woof
+getName() called on Mia
+speak() in Cat: Mia
+Mia says Meow
+printSpeak end
+Animal constructor: Buddy
+Dog constructor: Buddy
+getName() called on Buddy
+Adding pet to kennel: Buddy
+Animal constructor: Shadow
+Cat constructor: Shadow
+getName() called on Shadow
+Adding pet to kenel: Shadow
+Kenel allPay start
+Buddy plays fetch
+Shadow chase laser
+Kenel allPlay end
