@@ -1,0 +1,24 @@
+Program start
+
+ReadScores start: score.txt
+File missing: score.txt
+ReadScore finally: score.txt
+
+WriteScores start: score.txt
+Wrote: 3 5
+Wrote: ERR 7
+Wrote: 9 2
+WriteScores finally: score.txt
+
+ReadScore start: score.txt
+Line: 3 5
+Token: 3
+Int: 3
+Token: 5
+Int: 5
+Line: ERR 7
+Token: ERR
+IO error: Bad token
+ReadScores finally: score.txt
+
+Program end
