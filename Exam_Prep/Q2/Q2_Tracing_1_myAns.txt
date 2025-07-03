@@ -1,0 +1,26 @@
+Program start
+
+TextDemo Start: file1.txt
+Text read error: file1.txt
+TextDemo read finally: file1.txt
+Text write: HelloWorld
+TextDemo write finally: file1.txt
+TextDemo start: file1.txt
+FirstLine: HelloWorld
+TextDemo read finally: file1.txt
+Text write: HelloWorld
+TextDemo write finally: file1.txt
+
+BinaryDemo start: file1.bin
+Wrote int: 1
+Read int: 1
+EOF in binary read: file1.bin
+BinaryDemo finally: file1.bin
+
+BinaryDemo start: file1.bin
+Wrote int: 1
+Read int: 1
+EOF in binary read: file1.bin
+BinaryDemo finally: file1.bin
+
+Program end

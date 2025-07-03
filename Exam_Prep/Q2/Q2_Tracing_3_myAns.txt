@@ -1,0 +1,33 @@
+Program start
+
+Analyse start: data.txt
+Error: missing file data.txt
+Analyze finally: data.txt
+
+WriteDefault start: data.txt
+Wrote: First line
+Wrote: 
+Wrote: Third line
+WriteDefault finally: data.txt
+
+Analyze start: data.txt
+Line 1: First line
+Line 2: 
+Error: blank line at 2
+Analyze finally: data.txt
+
+Transform start: data.txt -> out.txt
+Reversed: First
+Reversed: line
+Reversed: Thrid
+Reversed: line
+Transform finally
+
+Analyze start: out.txt
+Line 1: tsriF
+Line 2: enil
+Line 3: drihT
+Line 4: enil
+Analyze finally: out.txt
+
+Program end

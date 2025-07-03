@@ -1,0 +1,11 @@
+Program start
+-> Opening for read: input1.bin
+File not found: input1.bin
+-> Opening for write: input2.bin
+Wrote value: 42
+Wrote value: 99
+-> Opening for read: input2.bin
+Read value: 42
+Read value: 99
+EOF reached on: input2.bin
+Program end

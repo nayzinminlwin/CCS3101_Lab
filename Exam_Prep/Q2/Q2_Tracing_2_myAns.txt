@@ -1,0 +1,19 @@
+Program start
+RedNumbers start: nums.txt
+File not found: nums.txt
+ReadNumbers finally: nums.txt
+
+WriteNumbers start: nums.txt
+Wrote text: 10
+Wrote text: X
+Wrote text: 20
+WriteNumbers finally: nums.txt
+
+ReadNumbers start: nums.txt
+Line 1: 10
+Parsed 10
+Line 2: X
+Number format error on line
+ReadNumbers finally: nums.txt
+
+Program end
