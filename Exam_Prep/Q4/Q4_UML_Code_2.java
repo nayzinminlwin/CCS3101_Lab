@@ -58,8 +58,7 @@ class FacultyMember extends Member {
 }
 
 abstract class LibraryItem {
-    protected String itemID;
-    protected String title;
+    protected String itemID, title;
 
     public LibraryItem(String id, String title) {
         this.itemID = id;
