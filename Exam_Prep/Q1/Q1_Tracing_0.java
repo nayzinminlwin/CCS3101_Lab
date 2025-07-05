@@ -9,7 +9,7 @@ interface Named {
 }
 
 // abstract base class
-abstract class Animal implements Named {
+abstract class Animal implements Named_ {
     protected String name;
 
     public Animal(String name) {
@@ -74,7 +74,7 @@ class Kennel<T extends Pet> {
 
 public class Q1_Tracing_0 {
     // generic method using inheritance & interface
-    public static <T extends Animal & Named> void printSpeak(List<T> animals) {
+    public static <T extends Animal & Named_> void printSpeak(List<T> animals) {
         for (Animal a : animals) {
             System.out.println(a.getName() + " says " + a.speak());
         }
